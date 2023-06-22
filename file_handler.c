@@ -87,6 +87,9 @@ void fun_finder(char *opcode, char *value, int n_line, int fmt)
 		{"pall", print_stack},
 		{"pint", print_top},
 		{"pop", pop_top},
+		{"swap", swap_nodes},
+		{"add", add_nodes},
+		{"nop", nop_nothing},
 		{NULL, NULL}
 	};
 	if (opcode[0] == '#')

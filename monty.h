@@ -59,6 +59,12 @@ void print_stack(stack_t **stack, unsigned int line_number);
 void print_top(stack_t **stack, unsigned int line_number);
 void pop_top(stack_t **stack, unsigned int line_number);
 
+/**functions_stack2.c**/
+void swap_nodes(stack_t **stack, unsigned int line_num);
+void add_nodes(stack_t **stack, unsigned int line_num);
+void nop_nothing(stack_t **stack, unsigned int line_num);
+
+
 
 /**error_message.c**/
 void print_err(int error_num, ...);
