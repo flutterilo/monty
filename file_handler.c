@@ -93,6 +93,8 @@ void fun_finder(char *opcode, char *value, int n_line, int fmt)
 		{"sub", sub_nodes},
 		{"div", div_nodes},
 		{"mul", mul_nodes},
+		{"pchar", print_char},
+		{"pstr", print_str},
 		{NULL, NULL}
 	};
 	if (opcode[0] == '#')

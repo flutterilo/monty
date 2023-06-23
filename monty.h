@@ -69,11 +69,14 @@ void div_nodes(stack_t **stack, unsigned int line_num);
 /**functions_stack3.c**/
 void mod_nodes(stack_t **stack, unsigned int line_num);
 void mul_nodes(stack_t **stack, unsigned int line_num);
+void print_char(stack_t **stack, unsigned int line_num);
+void print_str(stack_t **stack, __attribute__((unused))unsigned int line_num);
 
 
 
 /**error_message.c**/
 void print_err(int error_num, ...);
+void print_err2(int error_num, ...);
 
 /**handle_nodeslist.c**/
 stack_t *create_node(int n);
