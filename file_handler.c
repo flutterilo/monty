@@ -52,7 +52,7 @@ void read_file(FILE *fd)
 
 int tokenize_line(char *line_str, int n_line, int fmt)
 {
-	const char *delim = "\n ";
+	const char *delim = " \n\t\a\b";
 	char *opcode;
 	char *value;
 
@@ -90,6 +90,9 @@ void fun_finder(char *opcode, char *value, int n_line, int fmt)
 		{"swap", swap_nodes},
 		{"add", add_nodes},
 		{"nop", nop_nothing},
+		{"sub", sub_nodes},
+		{"div", div_nodes},
+		{"mul", mul_nodes},
 		{NULL, NULL}
 	};
 	if (opcode[0] == '#')

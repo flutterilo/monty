@@ -56,3 +56,47 @@ void nop_nothing(stack_t **stack, unsigned int line_num)
 	(void) stack;
 	(void) line_num;
 }
+
+/**
+* sub_nodes - subtract the top element of stack
+* @stack: list of nodes
+* @line_num: line number
+*/
+
+void sub_nodes(stack_t **stack, unsigned int line_num)
+{
+	int sum;
+
+	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
+
+		print_err(8, line_num, "sub");
+
+
+	(*stack) = (*stack)->next;
+	sum = (*stack)->n - (*stack)->prev->n;
+	(*stack)->n = sum;
+	free((*stack)->prev);
+	(*stack)->prev = NULL;
+}
+
+/**
+* div_nodes - divide the top two elements of the stack.
+* @stack: list of nodes
+* @line_num: line number
+*/
+
+void div_nodes(stack_t **stack, unsigned int line_num)
+{
+	int sum;
+
+	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
+		print_err(8, line_num, "div");
+
+	if ((*stack)->n == 0)
+		print_err(9, line_num);
+	(*stack) = (*stack)->next;
+	sum = (*stack)->n / (*stack)->prev->n;
+	(*stack)->n = sum;
+	free((*stack)->prev);
+	(*stack)->prev = NULL;
+}

@@ -1,5 +1,7 @@
 #include "monty.h"
 
+stack_t *head = NULL;
+
 /**
 * main - main of the program
 * @argc: number of arguments
@@ -7,7 +9,6 @@
 * Return: return 0 if success
 */
 
-stack_t *head = NULL;
 int main(int argc, char *argv[])
 {
 	if (argc != 2)
