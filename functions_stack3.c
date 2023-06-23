@@ -45,7 +45,7 @@ void mod_nodes(stack_t **stack, unsigned int line_num)
 }
 
 /**
-* mod_nodes - modolu top of elements
+* print_char - print char
 * @stack: list of nodes
 * @line_num: line number
 */

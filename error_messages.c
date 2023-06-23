@@ -39,15 +39,6 @@ void print_err(int error_num, ...)
 			fprintf(stderr, "L%d: can't pop an empty stack\n",
 					 va_arg(arg, int));
 			break;
-		case 8:
-			l_num = va_arg(arg, unsigned int);
-			op = va_arg(arg, char *);
-			fprintf(stderr, "L%d: can't %s, stack too short\n", l_num, op);
-			break;
-		case 9:
-			fprintf(stderr, "L%d: division by zero\n",
-					 va_arg(arg, unsigned int));
-			break;
 		default:
 			break;
 	}
@@ -55,6 +46,10 @@ void print_err(int error_num, ...)
 	exit(EXIT_FAILURE);
 }
 
+/**
+* print_err2 - print errors
+* @error_num: print error depend on number
+*/
 
 void print_err2(int error_num, ...)
 {
